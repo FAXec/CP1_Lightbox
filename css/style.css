@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: poppins, sans-serif;
+  background: linear-gradient(
+    153deg,
+    rgba(62, 152, 245, 0.5914740896358543) 0%,
+    rgba(25, 255, 16, 0.12088585434173671) 100%
+  );
+  display: grid;
+  place-items: centre;
+  align-content: center;
+  min-height: 100vh;
+}
