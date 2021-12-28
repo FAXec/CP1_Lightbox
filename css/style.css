@@ -14,7 +14,7 @@
 
 h1 {
   text-align: center;
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: var(--primary);
   transition: transform 0.5s ease-in-out;
 }
