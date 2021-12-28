@@ -88,7 +88,17 @@ lightboxBtns.forEach(btn => {
     });    
 });
 
+window.addEventListener('keydown',(e)=>{
+    if (!lightboxContainer.classList.contains('active')) {
+        return        
+        // console.log(e.key);
+    }
 
+    if () {
+        
+    }
+    
+});
 
 
 
