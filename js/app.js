@@ -21,6 +21,7 @@ const hideLightBox = () => {lightboxContainer.classList.remove('active')}
 const setActiveImage = (image) =>{
     lightboxImage.src = image.dataset.imagesrc
     activeImage = lightboxArray.indexOf(image)
+    removeActiveBtnClass();
     // console.log(activeImage)
 
 switch (activeImage) {
@@ -31,11 +32,18 @@ switch (activeImage) {
     lightboxBtnRight.classList.add('inactive');
     break;
     default:
-    lightboxBtns.forEach(btn =>{
-        btn.classList.remove('inactive');
-    });
+    removeActiveBtnClass();
     break;
 }}
+
+const removeActiveBtnClass = () =>{
+
+lightboxBtns.forEach(btn =>{
+        btn.classList.remove('inactive');
+    });
+
+
+}
 
 
 const removeBtnAnimation = () =>{
@@ -90,11 +98,12 @@ lightboxBtns.forEach(btn => {
 
 window.addEventListener('keydown',(e)=>{
     if (!lightboxContainer.classList.contains('active')) {
-        return        
+        return;        
         // console.log(e.key);
     }
-
-    if () {
+    if (e.key.includes('Left') || e.key.includes('Right') ) {
+        e.preventDefault();
+        transitionSlideHandler(e.key.toLowerCase());
         
     }
     
